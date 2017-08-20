@@ -123,6 +123,7 @@ int main() {
 
 //    jsonfile();
 //    readtxt();
+    //welcome LiShiYu666
     readTxtByLine("json.txt");
     return 0;
     ofstream outfile;//建立ofstream对象，outfile
