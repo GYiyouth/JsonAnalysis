@@ -300,13 +300,13 @@ void DoubleLinkedLinearList<T>::info() const {
     if (this->getSize() == 0){
         return;
     }
-    cout << "  -   head  : " << this->getHead()->getDataNode() << endl;
-    cout << "  -   circle: " << this->circleJudge()<< endl;
-    cout << "  -   tail  : " << this->getTailNode()->getDataNode() << endl;
+//    cout << "  -   head  : " << this->getHead()->getDataNode() << endl;
+//    cout << "  -   circle: " << this->circleJudge()<< endl;
+//    cout << "  -   tail  : " << this->getTailNode()->getDataNode() << endl;
     for (int i = 0; i < getSize(); ++i) {
         const int j = i;
         //FIXME
-        cout << "  -   index = " << i<< " DNode's value is " << getNode(j)->getDataNode() << endl;
+//        cout << "  -   index = " << i<< " DNode's value is " << getNode(j)->getDataNode() << endl;
     }
 }
 

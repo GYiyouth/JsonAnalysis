@@ -21,27 +21,36 @@ private:
     DNode<T> * before = nullptr;
 protected:
 public:
-    DNode<T> *getBefore() const {
+
+    DNode() {
+
+    }
+
+    DNode(T &dataNode){
+
+    }
+
+    virtual DNode<T> *getBefore() const {
         return before;
     }
 
-    void setBefore(DNode *before) {
+    virtual void setBefore(DNode *before) {
         DNode<T>::before = before;
     }
 
-    void setNextNode(DNode *nextNode) {
+    virtual void setNextNode(DNode *nextNode) {
         Node<T>::setNextNode(nextNode);
     }
 
-    T getDataNode() const {
+    virtual T getDataNode() const {
         return Node<T>::getDataNode();
     }
 
-    void setDataNode(T dataNode) {
+    virtual void setDataNode(T dataNode) {
         Node<T>::setDataNode(dataNode);
     }
 
-    DNode<T> *getNextNode() const {
+    virtual DNode<T> *getNextNode() const {
         return (DNode<T>*)Node<T>::getNextNode();
     }
 

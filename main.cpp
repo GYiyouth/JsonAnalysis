@@ -123,19 +123,24 @@ void jsonfile(){
     format(jsonStr);
 }
 
+
+void JSONTest1();
+
 int main() {
 
 //    jsonfile();
 //    readtxt();
     //welcome LiShiYu666
 //    readTxtByLine(txtFile);
+//
+//    Entry<int> entry1;
+//    entry1.setKey("num");
+//    int a = 1;
+//    entry1.setValue(&a);
+//    entry1.print();
 
-    entry<int> entry1;
-    entry1.setKey("num");
-    int a = 1;
-    entry1.setValue(&a);
-    entry1.print();
 
+    JSONTest1();
     return 0;
     ofstream outfile;//建立ofstream对象，outfile
     outfile.open("json.txt",ios::app);//将对象与文件关联
