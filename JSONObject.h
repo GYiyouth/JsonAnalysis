@@ -7,6 +7,7 @@
 
 #include <string>
 #include <iostream>
+#include <queue>
 #include "structure/DoubleLinkedLinearList.h"
 #include "structure/DNode.h"
 
@@ -62,7 +63,7 @@ public:
 
     template <class _Type>
     static _Type *getValue(Entry& entry) {
-        return entry.value;
+        return (_Type*)entry.value;
     }
 
     template <class _Type>
@@ -79,9 +80,10 @@ private:
     static const int default_size = 16;
     static const int default_empty_size = 0;
     int size = 0;
-    DoubleLinkedLinearList<Entry> entryList;
+
 protected:
 public:
+    DoubleLinkedLinearList<Entry> entryList;
     template <class T>
     static bool put(JSONObject* jsonObject ,std::string key ,T& value){
         if (jsonObject == nullptr){
@@ -93,7 +95,9 @@ public:
     }
 };
 
-
+/**
+ * 数组形式的json对象
+ */
 class JSONArray{
 private:
 
@@ -105,6 +109,11 @@ void JSONTest1(){
     auto jsonObject = new JSONObject();
     int a = 1;
     jsonObject->put(jsonObject, "key", a);
+    Entry entry = jsonObject->entryList.getHead()->getDataNode();
+    //如果你使用静态模板方法，你需要这样指定类别
+    //TODO typedef试试呢
+    std::cout << Entry::getValue<int>(entry);
+    std::queue queue;
 }
 
 
